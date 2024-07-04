@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.fa {
-  width: none;
-  height: 1em;
-}
+@import 'fonts';
 
-.ca {
-  padding: 1em;
+* {
+  font-style: normal;
+  font-family: 'Hepta Slab', serif;
+  font-optical-sizing: auto;
 }

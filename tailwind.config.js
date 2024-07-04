@@ -9,7 +9,16 @@ export default {
     './error.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        green: '#01c38e',
+        blue: '#132d46',
+        black: '#1a1e29'
+      },
+      dropShadow: {
+        black: '0 0 3px rgba(0, 0, 0, 0.5)'
+      }
+    },
   },
   plugins: [],
 }
