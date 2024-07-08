@@ -17,6 +17,9 @@ export default {
       },
       dropShadow: {
         black: '0 0 3px rgba(0, 0, 0, 0.5)'
+      },
+      width: {
+        'icon-svg-fixed': 'calc(28.98px - 0.025rem)',
       }
     },
   },

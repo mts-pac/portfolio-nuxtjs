@@ -6,6 +6,7 @@
           :links="[
             { name: 'SOBRE MIM', to: '#about-me' },
             { name: 'HABILIDADES', to: '#skills' },
+            { name: 'FORMAÇÃO', to: '#graduate' },
             { name: 'EXPERIÊNCIA', to: '#works' },
           ]"
         />
@@ -119,11 +120,11 @@
           />
 
           <ui-button
-            class="bg-slate-300 duration-300 hover:scale-110"
+            class="duration-300 hover:scale-110"
             icon="fa-solid fa-envelope"
             icon-label
             icon-size="lg"
-            variant="secondary"
+            variant="green"
             title="Email"
             @click="onClickEmail"
           />
@@ -147,6 +148,155 @@
             :title
             :paragraph
           />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue text-slate-200" id="graduate">
+      <div class="mx-auto gap-3 py-10 2xl:container">
+        <div class="flex justify-between">
+          <div>
+            <span class="flex items-center gap-2">
+              <h1 class="fs-lobster !mb-0 self-center text-5xl drop-shadow-md">
+                Formação
+              </h1>
+            </span>
+
+            <span class="mb-2 block font-semibold">
+              Desenvolvedor Nuxt.js (Vue.js) e Nest.js (Typescript)
+            </span>
+
+            <span class="flex items-center gap-2">
+              <nuxt-img
+                class="w-icon-svg-fixed h-[20px] px-1"
+                src="/icon/nuxt.svg"
+              ></nuxt-img>
+
+              <font-awesome-icon
+                icon="fa-brands fa-vuejs"
+                size="lg"
+                fixed-width
+              />
+
+              <nuxt-img
+                class="w-icon-svg-fixed h-[20px] px-1"
+                src="/icon/tailwind.svg"
+              ></nuxt-img>
+
+              <nuxt-img
+                class="w-icon-svg-fixed h-[20px] px-1"
+                src="/icon/nestjs.svg"
+              ></nuxt-img>
+
+              <nuxt-img
+                class="w-icon-svg-fixed h-[20px] px-1"
+                src="/icon/spring-boot.svg"
+              ></nuxt-img>
+
+              <font-awesome-icon
+                icon="fa-brands fa-golang"
+                size="lg"
+                fixed-width
+              />
+
+              <font-awesome-icon
+                icon="fa-brands fa-node-js"
+                size="xl"
+                fixed-width
+              />
+
+              <font-awesome-icon
+                icon="fa-brands fa-linux"
+                size="lg"
+                fixed-width
+              />
+
+              <font-awesome-icon
+                icon="fa-brands fa-docker"
+                size="lg"
+                fixed-width
+              />
+              <font-awesome-icon
+                icon="fa-brands fa-git"
+                size="lg"
+                fixed-width
+              />
+            </span>
+
+            <hr class="my-2 w-[700px] border-t-2" />
+
+            <div class="mt-4 w-[700px]">
+              <ul>
+                <li class="flex gap-2">
+                  <font-awesome-icon class="mt-1" icon="fa-solid fa-minus" />
+                  Bacharel em Ciência da Computação pela Universidade Federal do
+                  Paraná
+                </li>
+
+                <li class="flex gap-2">
+                  <font-awesome-icon class="mt-1" icon="fa-solid fa-minus" /> 4
+                  anos de experiência em desenvolvimento web com Vue.js
+                </li>
+
+                <li class="flex gap-2">
+                  <font-awesome-icon class="mt-1" icon="fa-solid fa-minus" /> 3
+                  anos de experiência em desenvolvimento web com Spring Boot
+                </li>
+
+                <li class="flex gap-2">
+                  <font-awesome-icon class="mt-1" icon="fa-solid fa-minus" /> 1
+                  ano de experiência em desenvolvimento web com Nuxt.js
+                </li>
+              </ul>
+            </div>
+
+            <hr class="my-2 w-[700px] border-t-2" />
+
+            <div class="mt-4 w-[700px]">
+              <p class="mb-2 text-justify">
+                Atualmente realizando o "<nuxt-link
+                  class="underline-offset-3 underline duration-300 hover:font-semibold hover:text-green"
+                  to="https://curso.fullcycle.com.br/curso-fullcycle/"
+                  target="_blank"
+                  >Curso Full Cycle 3.0</nuxt-link
+                >" para sistemas de grande porte.
+              </p>
+
+              <p class="text-justify">
+                Um desenvolvedor full cycle é um profissional que gerencia todas
+                as etapas do desenvolvimento de software, desde a criação até a
+                manutenção.
+              </p>
+            </div>
+
+            <ui-button
+              class="me-3 mt-5 min-w-[100px] duration-300 hover:scale-110"
+              icon="fa-brands fa-linkedin"
+              icon-size="lg"
+              icon-label
+              title="Linkedin"
+              @click="onClickLinkedin"
+            />
+
+            <ui-button
+              class="duration-300 hover:scale-110"
+              icon="fa-solid fa-download"
+              icon-label
+              icon-size="lg"
+              variant="green"
+              title="Baixar CV"
+              @click="onClickEmail"
+            />
+          </div>
+
+          <div>
+            <nuxt-img
+              class="dropshadow rounded-[50px]"
+              src="/img/me-graduate.jpg"
+              height="500px"
+              alt="Banner do portfólio. Jovem com headphone em frente ao computador"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -202,6 +352,10 @@ const onClickWhatsapp = () => {
 
 const onClickEmail = () => {
   window.open('mailto:mts.pacheco.sts@gmail.com', '_blank')
+}
+
+const onClickLinkedin = () => {
+  window.open('https://www.linkedin.com/in/matheus-pacheco-a42845239', '_blank')
 }
 const skills = [
   {
