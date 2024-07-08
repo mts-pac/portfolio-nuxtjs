@@ -183,6 +183,12 @@
                 src="/icon/tailwind.svg"
               ></nuxt-img>
 
+              <font-awesome-icon
+                icon="fa-brands fa-bootstrap"
+                size="lg"
+                fixed-width
+              />
+
               <nuxt-img
                 class="w-icon-svg-fixed h-[20px] px-1"
                 src="/icon/nestjs.svg"
