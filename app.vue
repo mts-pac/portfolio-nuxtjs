@@ -23,13 +23,13 @@
             </h1>
 
             <h2 class="whitespace-nowrap text-2xl">
-              Desenvolvedor Full Stack Nuxt.js e Nest.js
+              Desenvolvedor Full Cycle Nuxt.js e Nest.js
             </h2>
           </div>
 
           <div>
             <nuxt-img
-              class="dropshadow rounded-[50px]"
+              class="drop-shadow-black rounded-[50px]"
               src="/img/banner.jpeg"
               height="500px"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
@@ -39,37 +39,18 @@
       </div>
     </section>
 
-    <section class="bg-slate-100">
-      <div class="mx-auto flex items-center gap-10 py-3 2xl:container">
-        <h3 class="text-xl">Nuxt.js</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">Vue.js</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">Spring Boot</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">Java</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">MySQL</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">Typescript</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">UX Design</h3>
-
-        <font-awesome-icon class="h-4" icon="fa-solid fa-code" />
-
-        <h3 class="text-xl">Sass</h3>
+    <section class="bg-gradient-to-r from-black to-slate-900 text-slate-100">
+      <div class="mx-auto 2xl:container">
+        <ui-carousel hide-pagination :items="['Nuxt.js']">
+          <vc-slide
+            class="px-3 py-2"
+            v-for="(item, i) in techs"
+            :key="i"
+            :id="i"
+          >
+            <h3 class="mb-0 text-nowrap">{{ item }}</h3>
+          </vc-slide>
+        </ui-carousel>
       </div>
     </section>
 
@@ -168,7 +149,7 @@
 
             <span class="flex items-center gap-2">
               <nuxt-img
-                class="w-icon-svg-fixed h-[20px] px-1"
+                class="h-[20px] w-icon-svg-fixed px-1"
                 src="/icon/nuxt.svg"
               ></nuxt-img>
 
@@ -179,7 +160,7 @@
               />
 
               <nuxt-img
-                class="w-icon-svg-fixed h-[20px] px-1"
+                class="h-[20px] w-icon-svg-fixed px-1"
                 src="/icon/tailwind.svg"
               ></nuxt-img>
 
@@ -190,12 +171,12 @@
               />
 
               <nuxt-img
-                class="w-icon-svg-fixed h-[20px] px-1"
+                class="h-[20px] w-icon-svg-fixed px-1"
                 src="/icon/nestjs.svg"
               ></nuxt-img>
 
               <nuxt-img
-                class="w-icon-svg-fixed h-[20px] px-1"
+                class="h-[20px] w-icon-svg-fixed px-1"
                 src="/icon/spring-boot.svg"
               ></nuxt-img>
 
@@ -297,7 +278,7 @@
 
           <div>
             <nuxt-img
-              class="dropshadow rounded-[50px]"
+              class="drop-shadow-black rounded-[50px]"
               src="/img/me-graduate.jpg"
               height="500px"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
@@ -363,6 +344,46 @@ const onClickEmail = () => {
 const onClickLinkedin = () => {
   window.open('https://www.linkedin.com/in/matheus-pacheco-a42845239', '_blank')
 }
+
+const techs = [
+  'Nuxt.js',
+  'Vue.js',
+  'Nest.js',
+  'Next.js',
+  'React.js',
+  'Typescript',
+  'TailwindCSS',
+  'Sass',
+  'UX Design',
+  'Bootstrap',
+  'Spring Boot',
+  'Spring Security',
+  'JPA',
+  'Java EE',
+  'JSP',
+  'GO Lang',
+  'MySQL',
+  'SQL Server',
+  'Postman',
+  'Design Patterns',
+  'Git',
+  'Docker',
+  'Linux',
+  'AWS S3',
+  'DDD',
+  'SOLID',
+  'Microserviços',
+  'Clean Architecture',
+  'REST API',
+  'GraphQL',
+  'Scrum',
+  'Metodologias Ágeis',
+  'Jira',
+  'Rabit MQ',
+  'Apache Kafka',
+  'Keycloak',
+]
+
 const skills = [
   {
     title: 'Desenvolvimento Front-end',
