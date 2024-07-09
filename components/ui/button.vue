@@ -13,11 +13,9 @@
   >
     <template v-if="icon">
       <template v-if="iconLabel">
-        <span
-          class="my-auto inline-block min-h-full items-center bg-[#0000001A] px-3 py-2"
-        >
+        <span class="inline-block h-full bg-[#0000001A] px-3 py-2 align-middle">
           <slot name="icon">
-            <font-awesome-icon class="icon" :icon :size="iconSize" />
+            <font-awesome-icon :icon :size="iconSize" />
           </slot>
         </span>
 
@@ -64,9 +62,3 @@ const { variant = 'green' } = defineProps<Props>()
 
 defineEmits(['click'])
 </script>
-
-<style>
-.icon {
-  @apply align-middle !important;
-}
-</style>

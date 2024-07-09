@@ -2,14 +2,7 @@
   <main class="flex flex-col">
     <section class="bg-green py-10">
       <div class="mx-auto 2xl:container">
-        <ui-navbar
-          :links="[
-            { name: 'SOBRE MIM', to: '#about-me' },
-            { name: 'HABILIDADES', to: '#skills' },
-            { name: 'FORMAÇÃO', to: '#graduate' },
-            { name: 'EXPERIÊNCIA', to: '#works' },
-          ]"
-        />
+        <ui-navbar :links />
 
         <div class="flex justify-between py-10">
           <div class="flex flex-col justify-center gap-4">
@@ -29,10 +22,10 @@
 
           <div>
             <nuxt-img
-              class="drop-shadow-black rounded-[50px]"
-              src="/img/banner.jpeg"
-              height="500px"
+              class="rounded-[50px] drop-shadow-black"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
+              height="500px"
+              src="/img/banner.jpeg"
             />
           </div>
         </div>
@@ -43,7 +36,7 @@
       <div class="mx-auto 2xl:container">
         <ui-carousel hide-pagination :items="['Nuxt.js']">
           <vc-slide
-            class="px-3 py-2"
+            class="mx-3 py-2"
             v-for="(item, i) in techs"
             :key="i"
             :id="i"
@@ -278,7 +271,7 @@
 
           <div>
             <nuxt-img
-              class="drop-shadow-black rounded-[50px]"
+              class="rounded-[50px] drop-shadow-black"
               src="/img/me-graduate.jpg"
               height="500px"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
@@ -288,7 +281,7 @@
       </div>
     </section>
 
-    <section class="bg-black py-10" id="works">
+    <section class="bg-gradient-to-b from-black to-slate-900 py-10" id="works">
       <div class="mx-auto flex flex-col gap-3 text-slate-100 2xl:container">
         <h1 class="fs-lobster text-5xl drop-shadow-md">Experiência</h1>
 
@@ -344,6 +337,13 @@ const onClickEmail = () => {
 const onClickLinkedin = () => {
   window.open('https://www.linkedin.com/in/matheus-pacheco-a42845239', '_blank')
 }
+
+const links = [
+  { name: 'SOBRE MIM', to: '#about-me' },
+  { name: 'HABILIDADES', to: '#skills' },
+  { name: 'FORMAÇÃO', to: '#graduate' },
+  { name: 'EXPERIÊNCIA', to: '#works' },
+]
 
 const techs = [
   'Nuxt.js',
