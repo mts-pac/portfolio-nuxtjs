@@ -5,16 +5,13 @@
     <h2 class="text-center text-xl font-bold">{{ title }}</h2>
 
     <div class="flex flex-col gap-3 py-5">
-      <p
-        class="text-justify"
-        v-if="Array.isArray(paragraph)"
-        v-for="(item, i) in paragraph"
-        :key="i"
-      >
-        {{ item }}
-      </p>
+      <template v-if="Array.isArray(paragraph)">
+        <p v-for="(item, i) in paragraph" :key="i" class="text-justify">
+          {{ item }}
+        </p>
+      </template>
 
-      <p class="text-justify" v-else>{{ paragraph }}</p>
+      <p v-else class="text-justify">{{ paragraph }}</p>
     </div>
   </div>
 </template>

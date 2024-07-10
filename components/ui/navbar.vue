@@ -4,9 +4,7 @@
       <h1 class="fs-lobster me-auto text-5xl drop-shadow-md">MP</h1>
       <ul class="flex grow justify-center gap-36">
         <li v-for="({ to, name }, i) in links" :key="i">
-          <a class="text-xl duration-300 hover:text-green" :href="to">{{
-            name
-          }}</a>
+          <a class="text-xl duration-300 hover:text-green" :href="to">{{ name }}</a>
         </li>
       </ul>
     </nav>
@@ -23,9 +21,3 @@ interface Props {
 
 defineProps<Props>()
 </script>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-</style>

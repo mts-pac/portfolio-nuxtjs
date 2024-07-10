@@ -7,7 +7,7 @@
       'bg-slate-100 text-slate-600': variant == 'secondary',
       'animate-[btn-pulse_0.75s_infinite_alternate]': pulse,
       'py-2': !iconLabel,
-      block,
+      block
     }"
     @click="$emit('click')"
   >
@@ -19,9 +19,7 @@
           </slot>
         </span>
 
-        <span
-          class="inline-block h-full min-w-[125px] px-3 py-2 align-middle text-base"
-        >
+        <span class="inline-block h-full min-w-[125px] px-3 py-2 align-middle text-base">
           <slot>
             {{ title }}
           </slot>
@@ -41,7 +39,7 @@
       </template>
     </template>
 
-    <slot class="inline-block min-w-[125px] text-base" v-else>
+    <slot v-else class="inline-block min-w-[125px] text-base">
       {{ title }}
     </slot>
   </button>

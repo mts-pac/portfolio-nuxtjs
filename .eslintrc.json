@@ -1,4 +1,7 @@
 {
-  "plugins": ["nuxt"],
-  "extends": ["plugin:nuxt/recommended"]
+  "extends": ["@nuxt/eslint-config", "plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "ignorePatterns": ["**/node_modules/**", "**/.nuxt/**"]
 }

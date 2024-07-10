@@ -6,7 +6,7 @@ export default {
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './app.vue',
-    './error.vue',
+    './error.vue'
   ],
   theme: {
     extend: {
@@ -19,9 +19,9 @@ export default {
         black: '0 0 3px rgba(0, 0, 0, 0.5)'
       },
       width: {
-        'icon-svg-fixed': 'calc(28.98px - 0.025rem)',
+        'icon-svg-fixed': 'calc(28.98px - 0.025rem)'
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 }
