@@ -452,4 +452,8 @@ html,
 h1 {
   margin: 0 !important;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 </style>
