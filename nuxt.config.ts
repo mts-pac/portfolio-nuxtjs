@@ -1,10 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    baseURL: '/portfolio-nuxtjs/', // baseURL: '/<repository>/'
-    buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
-  },
-  ssr: false,
   css: [
     '~/assets/scss/main.scss',
     'vue3-carousel/dist/carousel.css',
@@ -35,6 +30,7 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/_ipx/w_400/img/me.jpeg',
+        '/portfolio-nuxtjs/_ipx/w_400/img/me.jpeg',
         '/_ipx/h_500/img/banner.jpeg',
         '/_ipx/_/icon/nuxt.svg',
         '/_ipx/_/icon/tailwind.svg',
@@ -52,6 +48,9 @@ export default defineNuxtConfig({
       exclude: ['node_modules']
     },
     strict: true
+  },
+  eslint: {
+    lintOnStart: false // Desativa o LintOnStart globalmente
   },
   modules: ['@nuxtjs/eslint-module', '@nuxt/image', 'vue3-carousel-nuxt'],
   carousel: {

@@ -1,7 +1,7 @@
 <template>
   <main class="flex flex-col">
     <section class="bg-green py-10">
-      <div class="mx-auto 2xl:container">
+      <div class="container mx-auto">
         <ui-navbar :links />
 
         <div class="flex justify-between py-10">
@@ -18,10 +18,9 @@
 
           <div>
             <nuxt-img
-              class="rounded-[50px] drop-shadow-black"
+              class="h-[500px] rounded-[50px] drop-shadow-black"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
-              height="500px"
-              src="/img/banner.jpeg"
+              src="https://i.imgur.com/exY7Ctf.jpg"
             />
           </div>
         </div>
@@ -29,19 +28,40 @@
     </section>
 
     <section class="bg-gradient-to-r from-black to-slate-900 text-slate-100">
-      <div class="mx-auto 2xl:container">
-        <ui-carousel hide-pagination>
-          <vc-slide v-for="(item, i) in techs" :id="i" :key="i" class="mx-3 py-2">
-            <h3 class="mb-0 text-nowrap">{{ item }}</h3>
-          </vc-slide>
-        </ui-carousel>
+      <div class="container mx-auto">
+        <div class="flex w-full items-center overflow-hidden text-nowrap">
+          <span class="inline-flex animate-[scroll_60s_linear_infinite] items-center">
+            <template v-for="(item, i) in techs" :key="i">
+              <h3 class="mx-3 mb-0 inline-block text-nowrap py-2">
+                {{ item }}
+              </h3>
+
+              <font-awesome-icon
+                class="mx-auto px-2"
+                icon="fa-solid fa-code"
+                size="sm"
+                fixed-width
+              />
+            </template>
+          </span>
+
+          <span class="inline-flex animate-[scroll_60s_linear_infinite]">
+            <h3 v-for="(item, i) in techs" :key="i" class="mx-3 mb-0 inline-block text-nowrap py-2">
+              {{ item }}
+              <font-awesome-icon class="ms-2" icon="fa-solid fa-code" size="sm" fixed-width />
+            </h3>
+          </span>
+        </div>
       </div>
     </section>
 
     <section id="about-me" class="bg-blue text-slate-200">
-      <div class="mx-auto flex gap-3 py-10 2xl:container">
+      <div class="container mx-auto flex gap-3 py-10">
         <div class="w-1/3">
-          <nuxt-img class="rounded-[50px] drop-shadow-md" src="/img/me.jpeg" width="400px">
+          <nuxt-img
+            class="w-[400px] rounded-[50px] drop-shadow-md"
+            src="https://i.imgur.com/jl1sgQn.jpeg"
+          >
           </nuxt-img>
         </div>
 
@@ -68,30 +88,42 @@
             soluções criativas e ficarei feliz em colaborar em seu próximo projeto.
           </p>
 
-          <ui-button
-            class="me-3 mt-5 min-w-[100px] duration-300 hover:scale-110"
-            icon="fa-brands fa-whatsapp"
-            icon-size="lg"
-            icon-label
-            title="WhatsApp"
-            @click="onClickWhatsapp"
-          />
+          <div class="mt-5 flex gap-3">
+            <ui-button
+              class="min-w-[100px] duration-300 hover:scale-110"
+              icon="fa-brands fa-github"
+              icon-label
+              icon-size="lg"
+              variant="green"
+              title="GitHub"
+              @click="onClickGitHub"
+            />
 
-          <ui-button
-            class="duration-300 hover:scale-110"
-            icon="fa-solid fa-envelope"
-            icon-label
-            icon-size="lg"
-            variant="green"
-            title="Email"
-            @click="onClickEmail"
-          />
+            <ui-button
+              class="min-w-[100px] duration-300 hover:scale-110"
+              icon="fa-brands fa-whatsapp"
+              icon-size="lg"
+              icon-label
+              title="WhatsApp"
+              @click="onClickWhatsapp"
+            />
+
+            <ui-button
+              class="min-w-[100px] duration-300 hover:scale-110"
+              icon="fa-solid fa-envelope"
+              icon-label
+              icon-size="lg"
+              variant="green"
+              title="Email"
+              @click="onClickEmail"
+            />
+          </div>
         </div>
       </div>
     </section>
 
     <section id="skills" class="to-from-slate-100 bg-gradient-to-b from-slate-200 py-10">
-      <div class="mx-auto flex flex-col gap-3 2xl:container">
+      <div class="container mx-auto flex flex-col gap-3">
         <h1 class="fs-lobster self-center text-5xl drop-shadow-md">Habilidades</h1>
 
         <div class="grid grid-cols-3 gap-4">
@@ -101,7 +133,7 @@
     </section>
 
     <section id="graduate" class="bg-blue text-slate-200">
-      <div class="mx-auto gap-3 py-10 2xl:container">
+      <div class="container mx-auto gap-3 py-10">
         <div class="flex justify-between">
           <div>
             <span class="flex items-center gap-2">
@@ -113,17 +145,19 @@
             </span>
 
             <span class="flex items-center gap-2">
-              <nuxt-img class="h-[20px] w-icon-svg-fixed px-1" src="/icon/nuxt.svg" />
+              <ui-icon-nuxtjs class="h-[20px] w-icon-svg-fixed px-1" />
 
               <font-awesome-icon icon="fa-brands fa-vuejs" size="lg" fixed-width />
 
-              <nuxt-img class="h-[20px] w-icon-svg-fixed px-1" src="/icon/tailwind.svg" />
+              <ui-icon-tailwind class="h-[20px] w-icon-svg-fixed px-1" />
 
               <font-awesome-icon icon="fa-brands fa-bootstrap" size="lg" fixed-width />
 
-              <nuxt-img class="h-[20px] w-icon-svg-fixed px-1" src="/icon/nestjs.svg" />
+              <ui-icon-nestjs class="h-[20px] w-icon-svg-fixed px-1" />
 
-              <nuxt-img class="h-[20px] w-icon-svg-fixed px-1" src="/icon/spring-boot.svg" />
+              <ui-icon-typescript class="h-[20px] w-icon-svg-fixed px-1" />
+
+              <ui-icon-spring-boot class="h-[20px] w-icon-svg-fixed px-1" />
 
               <font-awesome-icon icon="fa-brands fa-golang" size="lg" fixed-width />
 
@@ -202,9 +236,8 @@
 
           <div>
             <nuxt-img
-              class="rounded-[50px] drop-shadow-black"
-              src="/img/me-graduate.jpg"
-              height="500px"
+              class="h-[500px] rounded-[50px] drop-shadow-black"
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0e25c1202897897.668dfdea74254.jpg"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
             />
           </div>
@@ -213,7 +246,7 @@
     </section>
 
     <section id="works" class="bg-gradient-to-b from-black to-slate-900 py-10">
-      <div class="mx-auto flex flex-col gap-3 text-slate-100 2xl:container">
+      <div class="container mx-auto flex flex-col gap-3 text-slate-100">
         <h1 class="fs-lobster text-5xl drop-shadow-md">Experiência</h1>
 
         <div class="grid grid-cols-3 gap-4">
@@ -235,7 +268,7 @@
     </section>
 
     <footer class="bg-slate-200">
-      <div class="items-top mx-auto flex items-center gap-3 py-3 2xl:container">
+      <div class="items-top container mx-auto flex items-center gap-3 py-3">
         <div class="me-auto">
           <span class="me-auto block text-xs font-medium">
             <font-awesome-icon class="me-1" icon="fa-solid fa-envelope" />
@@ -267,6 +300,10 @@ const onClickEmail = () => {
 
 const onClickLinkedin = () => {
   window.open('https://www.linkedin.com/in/matheus-pacheco-a42845239', '_blank')
+}
+
+const onClickGitHub = () => {
+  window.open('https://github.com/mts-pac')
 }
 
 const onClickDownloadCV = () => {
@@ -346,7 +383,7 @@ const skills = [
 const works = [
   {
     company: 'Sym',
-    logo: '/img/logo-sym.webp',
+    logo: 'https://i.imgur.com/S0idv9e.png',
     initiation: '10/2022',
     title: 'Desenvolvedor Pleno 2',
     techs: ['Nuxt.js', 'Vue.js', 'SQLServer', 'OpenVPN', 'Typescript'],
@@ -357,7 +394,7 @@ const works = [
   },
   {
     company: 'Grupo Astus',
-    logo: '/img/logo-grupo-astus.png',
+    logo: 'https://i.imgur.com/5U3rV8D.png',
     initiation: '11/2021',
     ending: '09/2023',
     title: 'Desenvolvedor Full-Stack Spring Boot',
@@ -369,7 +406,7 @@ const works = [
   },
   {
     company: 'Projeto Siga UFPR',
-    logo: '/img/logo-siga.png',
+    logo: 'https://i.imgur.com/pRBe9gt.png',
     initiation: '01/2021',
     ending: '12/2021',
     title: 'Atendimento, Testes e Desenvolvimento',
@@ -380,6 +417,33 @@ const works = [
     ]
   }
 ]
+
+useHead({
+  title: 'Portfólio - Matheus Pacheco',
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    {
+      name: 'description',
+      content: 'Portfólio de um Desenvolvedor de Software Full Cycle (Full stack) Nuxt.js e Nest.js'
+    },
+    { name: 'author', content: 'Matheus Pacheco' },
+    {
+      name: 'keywords',
+      content:
+        'Desenvolvedor de Software, Portfólio, Nuxt.js, Nest.js, Typescript, GO Lang, Spring Boot, SOLID< DDD, Microserviços, Full Cycle, Full Stack, Docker, Matheus Pacheco'
+    },
+    { property: 'og:title', content: 'Portfólio - Matheus Pacheco' },
+    {
+      property: 'og:description',
+      content: 'Portfólio de um Desenvolvedor de Software Full Cycle (Full stack) Nuxt.js e Nest.js'
+    },
+    { property: 'og:image', content: 'https://i.imgur.com/jl1sgQn.jpeg' },
+    { property: 'og:url', content: 'https://mts-pac.github.io/portfolio-nuxtjs/' },
+    { property: 'og:type', content: 'website' }
+  ],
+  link: [{ rel: 'icon', type: 'image/x-icon', href: 'https://i.imgur.com/YSmdCoR.png' }]
+})
 </script>
 
 <style lang="scss">

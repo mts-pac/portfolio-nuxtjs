@@ -20,6 +20,12 @@ export default {
       },
       width: {
         'icon-svg-fixed': 'calc(28.98px - 0.025rem)'
+      },
+      keyframes: {
+        scroll: {
+          from: { transform: 'translateX(0px)' },
+          to: { transform: 'translateX(-100%)' }
+        }
       }
     }
   },
