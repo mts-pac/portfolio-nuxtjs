@@ -307,7 +307,7 @@ const onClickGitHub = () => {
 }
 
 const onClickDownloadCV = () => {
-  window.open('/curriculum.pdf', '_blank')
+  window.open('https://mts-pac.github.io/portfolio-nuxtjs/curriculum.pdf', '_blank')
 }
 
 const links = [
