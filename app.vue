@@ -71,15 +71,18 @@
           </h1>
 
           <p class="mb-3 mt-5 text-justify">
-            Sou desenvolvedor Full-Stack. Atualmente, resido em Curitiba e estou disponível para
-            trabalhos remotos e presenciais. Sou formado em Bacharelado em Ciência da Computação
-            pela Universidade Federal do Paraná (UFPR).
+            Sou desenvolvedor Full Cycle. Atualmente, resido em Curitiba e estou disponível para
+            trabalhos remotos e presenciais.
+            <span class="font-bold">
+              Bacharel em Ciência da Computação pela Universidade Federal do Paraná (UFPR) </span
+            >.
           </p>
 
           <p class="mb-3 text-justify">
             Apaixonado por desafios e soluções inovadoras. Com experiência de 4 anos em projetos
             amplos de administração universitária e da indústria de vidros, domínio em tecnologias
-            como Nuxt.js, Vue.js, Nest,js, Java, Spring Boot e MySQL.
+            como
+            <span class="font-bold"> Nuxt.js, Vue.js, Nest,js, Java, Spring Boot e MySQL </span>.
           </p>
 
           <p class="text-justify">
@@ -225,11 +228,11 @@
 
             <ui-button
               class="duration-300 hover:scale-110"
-              icon="fa-solid fa-download"
+              icon="fa-solid fa-file-lines"
               icon-label
               icon-size="lg"
               variant="green"
-              title="Baixar CV"
+              title="Acessar CV"
               @click="onClickDownloadCV"
             />
           </div>
@@ -361,7 +364,7 @@ const skills = [
     title: 'Desenvolvimento Front-end',
     paragraph: [
       'Transformando designs em sites dinâmicos e responsivos com código limpo e padronizado com criatividade.',
-      'Com experiência robusta em Nuxt.js, Vue.js, Typescript, SCSS. Trabalhando com tecnologias como Pinia, VueRouter, Vuetify, TailwindCSS e Bootstrap.'
+      'Com experiência robusta em Nuxt.js, Vue.js, Typescript, Sass. Trabalhando com tecnologias como Pinia, VueRouter, Vuetify, TailwindCSS e Bootstrap.'
     ]
   },
   {
@@ -384,7 +387,7 @@ const works = [
   {
     company: 'Sym',
     logo: 'https://i.imgur.com/S0idv9e.png',
-    initiation: '10/2022',
+    initiation: '10/2023',
     title: 'Desenvolvedor Pleno 2',
     techs: ['Nuxt.js', 'Vue.js', 'SQLServer', 'OpenVPN', 'Typescript'],
     paragraph: [
@@ -413,7 +416,7 @@ const works = [
     techs: ['Java EE', 'JSP', 'MySQL', 'MVC', 'Bootstrap', 'GIT', 'Vue.js'],
     paragraph: [
       'O projeto SIGA vinculado a UFPR é um sistema de gerenciamento acadêmico, dividido entre graduação e pós-graduação',
-      'Direcionado a pós-graduação, eu trabalha no desenvolvimento em uma arquitetura MVC usando o JSP, Java EE, JavaScript e Bootstrap. Auxiliava também no suporte ao cliente.'
+      'Direcionado a pós-graduação, eu trabalha no desenvolvimento em uma arquitetura MVC usando o JSP, Java EE, JavaScript, Boot. Posteriormente entrei em um projeto com o uso de Spring Boot e Vue.js. Auxiliava também no suporte ao cliente.'
     ]
   }
 ]

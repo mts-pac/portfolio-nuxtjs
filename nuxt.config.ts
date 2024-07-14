@@ -4,12 +4,15 @@ export default defineNuxtConfig({
     baseURL: '/portfolio-nuxtjs/', // baseURL: '/<repository>/'
     buildAssetsDir: 'assets' // don't use "_" at the begining of the folder name to avoids nojkill conflict
   },
+
   css: [
     '~/assets/scss/main.scss',
     'vue3-carousel/dist/carousel.css',
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
+
   devtools: { enabled: true },
+
   build: {
     transpile: [
       '@fortawesome/vue-fontawesome',
@@ -19,9 +22,11 @@ export default defineNuxtConfig({
       '@fortawesome/free-regular-svg-icons'
     ]
   },
+
   image: {
     provider: 'ipx'
   },
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -30,25 +35,33 @@ export default defineNuxtConfig({
       'tailwindcss/nesting': {}
     }
   },
+
   typescript: {
     tsConfig: {
       exclude: ['node_modules']
     },
     strict: true
   },
+
   eslint: {
     lintOnStart: false // Desativa o LintOnStart globalmente
   },
+
   modules: ['@nuxtjs/eslint-module', '@nuxt/image', 'vue3-carousel-nuxt'],
+
   carousel: {
     prefix: 'vc'
   },
+
   vue: {
     propsDestructure: true
   },
+
   router: {
     options: {
       scrollBehaviorType: 'smooth'
     }
-  }
+  },
+
+  compatibilityDate: '2024-07-14'
 })
