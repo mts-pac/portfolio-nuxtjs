@@ -1,24 +1,26 @@
 <template>
   <main class="flex flex-col">
     <section class="bg-green py-10">
-      <div class="container mx-auto">
+      <div class="container mx-auto px-4">
         <ui-navbar :links />
 
         <div class="flex justify-between py-10">
-          <div class="flex flex-col justify-center gap-4">
-            <h1 class="whitespace-nowrap text-3xl">Olá, sou o Matheus Pacheco</h1>
+          <div class="flex basis-1/2 flex-col justify-center gap-4">
+            <h1 class="whitespace-nowrap lg:text-2xl xl:text-3xl">Olá, sou o Matheus Pacheco</h1>
 
-            <h1 class="fs-lobster whitespace-nowrap text-6xl drop-shadow-md">
+            <h1 class="fs-lobster whitespace-nowrap drop-shadow-md lg:text-5xl xl:text-6xl">
               Programando soluções <br />
               inteligentes!
             </h1>
 
-            <h2 class="whitespace-nowrap text-2xl">Desenvolvedor Full Cycle Nuxt.js e Nest.js</h2>
+            <h2 class="whitespace-nowrap lg:text-xl xl:text-2xl">
+              Desenvolvedor Full Cycle Nuxt.js e Nest.js
+            </h2>
           </div>
 
-          <div>
+          <div class="basis-1/2">
             <nuxt-img
-              class="h-[500px] rounded-[50px] drop-shadow-black"
+              class="rounded-[50px] drop-shadow-black lg:h-[300px] xl:h-auto"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
               src="https://i.imgur.com/exY7Ctf.jpg"
             />
@@ -45,7 +47,7 @@
             </template>
           </span>
 
-          <span class="inline-flex animate-[scroll_60s_linear_infinite]">
+          <span class="inline-flex animate-[scroll_65s_linear_infinite]">
             <h3 v-for="(item, i) in techs" :key="i" class="mx-3 mb-0 inline-block text-nowrap py-2">
               {{ item }}
               <font-awesome-icon class="ms-2" icon="fa-solid fa-code" size="sm" fixed-width />
@@ -56,21 +58,21 @@
     </section>
 
     <section id="about-me" class="bg-blue text-slate-200">
-      <div class="container mx-auto flex gap-3 py-10">
-        <div class="w-1/3">
+      <div class="container mx-auto flex gap-10 px-4 py-10">
+        <div class="basis-[30%] 2xl:w-1/3">
           <nuxt-img
-            class="w-[400px] rounded-[50px] drop-shadow-md"
+            class="rounded-[50px] drop-shadow-md lg:w-[350px] xl:w-[400px]"
             src="https://i.imgur.com/jl1sgQn.jpeg"
           >
           </nuxt-img>
         </div>
 
-        <div class="my-auto w-2/4 justify-center">
-          <h1 class="fs-lobster self-center text-5xl drop-shadow-md">
+        <div class="my-auto basis-[60%] justify-center">
+          <h1 class="fs-lobster self-center drop-shadow-md lg:text-4xl xl:text-5xl">
             Bem-vindo ao meu portifólio!
           </h1>
 
-          <p class="mb-3 mt-5 text-justify">
+          <p class="mb-3 mt-5 text-wrap text-justify">
             Sou desenvolvedor Full Cycle. Atualmente, resido em Curitiba e estou disponível para
             trabalhos remotos e presenciais.
             <span class="font-bold">
@@ -78,14 +80,14 @@
             >.
           </p>
 
-          <p class="mb-3 text-justify">
+          <p class="mb-3 text-wrap text-justify">
             Apaixonado por desafios e soluções inovadoras. Com experiência de 4 anos em projetos
             amplos de administração universitária e da indústria de vidros, domínio em tecnologias
             como
             <span class="font-bold"> Nuxt.js, Vue.js, Nest,js, Java, Spring Boot e MySQL </span>.
           </p>
 
-          <p class="text-justify">
+          <p class="text-wrap text-justify">
             Meu objetivo é contribuir como desenvolvedor Front-end e/ou Back-end, priorizando a
             qualidade e arquitetura de software. Estou sempre em busca de aprender e implementar
             soluções criativas e ficarei feliz em colaborar em seu próximo projeto.
@@ -126,19 +128,28 @@
     </section>
 
     <section id="skills" class="to-from-slate-100 bg-gradient-to-b from-slate-200 py-10">
-      <div class="container mx-auto flex flex-col gap-3">
+      <div class="container mx-auto flex flex-col gap-3 px-4">
         <h1 class="fs-lobster self-center text-5xl drop-shadow-md">Habilidades</h1>
 
-        <div class="grid grid-cols-3 gap-4">
-          <ui-card-skill v-for="({ title, paragraph }, i) in skills" :key="i" :title :paragraph />
+        <div class="flex snap-x gap-2 overflow-auto">
+          <ui-card-skill
+            v-for="({ title, paragraph }, i) in skills"
+            :key="i"
+            :title
+            :paragraph
+            :style="{
+              flex: '1 1 0px'
+            }"
+            class="min-w-[400px]"
+          />
         </div>
       </div>
     </section>
 
     <section id="graduate" class="bg-blue text-slate-200">
-      <div class="container mx-auto gap-3 py-10">
-        <div class="flex justify-between">
-          <div>
+      <div class="container mx-auto gap-3 px-4 py-10">
+        <div class="flex justify-center gap-3">
+          <div class="basis-1/2">
             <span class="flex items-center gap-2">
               <h1 class="fs-lobster !mb-0 self-center text-5xl drop-shadow-md">Formação</h1>
             </span>
@@ -147,7 +158,7 @@
               Desenvolvedor Nuxt.js (Vue.js) e Nest.js (Typescript)
             </span>
 
-            <span class="flex items-center gap-2">
+            <span class="flex flex-wrap items-center gap-2">
               <ui-icon-nuxtjs class="h-[20px] w-icon-svg-fixed px-1" />
 
               <font-awesome-icon icon="fa-brands fa-vuejs" size="lg" fixed-width />
@@ -173,9 +184,9 @@
               <font-awesome-icon icon="fa-brands fa-git" size="lg" fixed-width />
             </span>
 
-            <hr class="my-2 w-[700px] border-t-2" />
+            <hr class="my-2 border-t-2 2xl:w-[700px]" />
 
-            <div class="mt-4 w-[700px]">
+            <div class="mt-4 2xl:w-[700px]">
               <ul>
                 <li class="flex gap-2">
                   <font-awesome-icon class="mt-1" icon="fa-solid fa-minus" />
@@ -199,9 +210,9 @@
               </ul>
             </div>
 
-            <hr class="my-2 w-[700px] border-t-2" />
+            <hr class="my-2 border-t-2 2xl:w-[700px]" />
 
-            <div class="mt-4 w-[700px]">
+            <div class="mt-4 2xl:w-[700px]">
               <p class="mb-2 text-justify">
                 Atualmente realizando o "<nuxt-link
                   class="underline-offset-3 underline duration-300 hover:font-semibold hover:text-green"
@@ -237,9 +248,9 @@
             />
           </div>
 
-          <div>
+          <div class="basis-1/2">
             <nuxt-img
-              class="h-[500px] rounded-[50px] drop-shadow-black"
+              class="mx-auto rounded-[50px] drop-shadow-black 2xl:h-[500px]"
               src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0e25c1202897897.668dfdea74254.jpg"
               alt="Banner do portfólio. Jovem com headphone em frente ao computador"
             />
@@ -248,11 +259,11 @@
       </div>
     </section>
 
-    <section id="works" class="bg-gradient-to-b from-black to-slate-900 py-10">
+    <section id="works" class="bg-gradient-to-b from-black to-slate-900 px-4 py-10">
       <div class="container mx-auto flex flex-col gap-3 text-slate-100">
         <h1 class="fs-lobster text-5xl drop-shadow-md">Experiência</h1>
 
-        <div class="grid grid-cols-3 gap-4">
+        <div class="flex snap-x gap-3 overflow-auto">
           <ui-card-work-experience
             v-for="(
               { company, logo, initiation, title, techs: tchs, paragraph, ending }, i
@@ -265,6 +276,10 @@
             :paragraph
             :techs="tchs"
             :title
+            :style="{
+              flex: '1 1 0px'
+            }"
+            class="min-w-[400px]"
           />
         </div>
       </div>
@@ -324,8 +339,8 @@ const techs = [
   'Nuxt.js',
   'Vue.js',
   'Nest.js',
-  'Next.js',
   'React.js',
+  'Next.js',
   'Typescript',
   'TailwindCSS',
   'Sass',
@@ -345,10 +360,14 @@ const techs = [
   'Docker',
   'Linux',
   'AWS S3',
-  'DDD',
-  'SOLID',
+  'Domain Driven Design',
+  'SOLID Express',
   'Microserviços',
   'Clean Architecture',
+  'Arquitetura Hexagonal',
+  'Event Storming',
+  'Event Driven Architecture',
+  'Sistemas Monolíticos',
   'REST API',
   'GraphQL',
   'Scrum',
@@ -356,7 +375,18 @@ const techs = [
   'Jira',
   'Rabit MQ',
   'Apache Kafka',
-  'Keycloak'
+  'Keycloak',
+  'gRPC',
+  'Integração Contínua',
+  'Kubernetes',
+  'Service Mesh com Istio',
+  'API Gateway',
+  'Observabilidade',
+  'OpenTelemetry',
+  'Terraform',
+  'Ansible',
+  'GitOps',
+  'Cloud Providers'
 ]
 
 const skills = [

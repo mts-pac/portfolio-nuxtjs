@@ -1,13 +1,13 @@
 <template>
   <div class="rounded-b-3xl rounded-t-[40px] bg-slate-100 text-black drop-shadow-md">
     <div class="rounded-t-3xl bg-blue px-5 py-3">
-      <nuxt-img height="65px" :src="logo"></nuxt-img>
+      <nuxt-img class="lg:h-[50px] xl:h-[55px] 2xl:h-[65px]" :src="logo"></nuxt-img>
     </div>
 
     <div class="px-7 py-3">
       <h2 class="text-lg font-bold">{{ title }}</h2>
 
-      <div class="flex gap-2 py-2">
+      <div class="flex flex-wrap gap-2 py-2">
         <template v-if="Array.isArray(techs)">
           <span
             v-for="(item, i) in techs"
